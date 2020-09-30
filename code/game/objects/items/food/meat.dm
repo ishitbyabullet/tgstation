@@ -294,6 +294,8 @@
 	. = ..()
 	AddComponent(/datum/component/slippery, 30)
 
+
+
 //////////////////////////////////////////// KEBABS AND OTHER SKEWERS ////////////////////////////////////////////
 
 /obj/item/food/kebab

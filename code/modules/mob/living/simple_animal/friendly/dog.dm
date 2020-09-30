@@ -163,7 +163,7 @@
 	icon_state = "walter"
 	icon_living = "walter"
 	icon_dead = "walter_dead"
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/corgi = 3) // Would feel redundant to add more new dog meats.
+	butcher_results = list(/obj/item/food/meat/slab/corgi = 3) // Would feel redundant to add more new dog meats.
 	gold_core_spawnable = FRIENDLY_SPAWN
 	collar_type = "corgi"
 	held_state = "bullterrier"

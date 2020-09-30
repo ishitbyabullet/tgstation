@@ -118,8 +118,8 @@
 	name = "Oreo Donut"
 	reqs = list(
 		/datum/reagent/consumable/milk = 5,
-		/obj/item/reagent_containers/food/snacks/cookie = 1,
-		/obj/item/reagent_containers/food/snacks/donut/plain = 1
+		/obj/item/food/snacks/cookie = 1,
+		/obj/item/food/snacks/donut/plain = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/donut/oreo
 
@@ -482,7 +482,7 @@
 		/obj/item/reagent_containers/food/snacks/hotdog = 1,
 		/obj/item/popsicle_stick = 1
 	)
-	result = /obj/item/reagent_containers/food/snacks/corndog
+	result = /obj/item/food/snacks/corndog
 	subcategory = CAT_PASTRY
 
 /datum/crafting_recipe/food/meatbun
