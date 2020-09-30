@@ -158,6 +158,15 @@
 	filling_color = "#879630"
 	value = FOOD_EXOTIC
 
+/obj/item/reagent_containers/food/snacks/donut/oreo
+	name = "oreo donut"
+	desc = "Goes great with a glass of moth milk."
+	icon_state = "donut_oreo"
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/sugar = 2)
+	tastes = list("donut" = 3, "cookie" = 1, "chocolate" = 1)
+	is_decorated = TRUE
+	value = FOOD_FAST
+
 //////////////////////JELLY DONUTS/////////////////////////
 
 /obj/item/reagent_containers/food/snacks/donut/jelly
@@ -260,6 +269,16 @@
 	is_decorated = TRUE
 	filling_color = "#879630"
 	value = FOOD_EXOTIC
+
+/obj/item/reagent_containers/food/snacks/donut/jelly/oreo
+	name = "oreo jelly donut"
+	desc = "Goes great with a glass of moth milk."
+	icon_state = "jelly_oreo"
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/sugar = 2)
+	tastes = list("jelly" = 1, "donut" = 3, "cookie" = 1)
+	is_decorated = TRUE
+	filling_color = "#ebeae4"
+	value = FOOD_FAST
 
 //////////////////////////SLIME DONUTS/////////////////////////
 
@@ -580,6 +599,38 @@
 	foodtype = GRAIN
 
 ////////////////////////////////////////////OTHER////////////////////////////////////////////
+
+/obj/item/reagent_containers/food/snacks/cotton_candy
+	name = "Cotton Candy"
+	desc = "Pink strands of sugar on top of a bright looking cone. Perfect for carnivals!"
+	icon_state = "cottoncandy1"
+	trash = /obj/item/reagent_containers/food/drinks/sillycup
+	list_reagents = list(/datum/reagent/consumable/sugar = 2, /datum/reagent/consumable/nutriment = 5)
+	tastes = list("sugar" = 1)
+	foodtype = JUNKFOOD | SUGAR
+	value = FOOD_JUNK
+
+/obj/item/reagent_containers/food/snacks/cotton_candy/Initialize()
+	. = ..()
+	if(prob(50))
+		desc = "Blue strands of sugar on top of a bright looking cone. Perfect for carnivals!"
+		icon_state = "cottoncandy2"
+
+/obj/item/reagent_containers/food/snacks/smore
+	name = "s'more"
+	desc = "Toasted marshmallows and gooey chocolate sandwiched between a pair of graham crackers. A campfire classic!"
+	icon_state = "smore"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/sugar = 1, /datum/reagent/consumable/coco = 1, /datum/reagent/consumable/nutriment/vitamin = 1)
+	tastes = list("chocolate" = 2, "marshmallows" = 2, "crackers" = 2)
+	foodtype = GRAIN | SUGAR
+	value = FOOD_FAST
+
+/obj/item/reagent_containers/food/snacks/smore/examine(mob/user)
+	. = ..()
+	if (prob(10))
+		desc = "Some more what?"
+	else
+		desc = initial(desc)
 
 /obj/item/reagent_containers/food/snacks/cookie
 	name = "cookie"

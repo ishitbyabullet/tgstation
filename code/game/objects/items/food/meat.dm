@@ -294,7 +294,28 @@
 	. = ..()
 	AddComponent(/datum/component/slippery, 30)
 
+/obj/item/food/snacks/friedchicken
+	name = "fried chicken"
+	desc = "A juicy hunk of chicken meat, fried to perfection."
+	icon_state = "friedchicken1"
+	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 6, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("chicken" = 3, "fried batter" = 1)
+	foodtypes = MEAT
 
+/obj/item/reagent_containers/food/snacks/friedchicken/Initialize()
+	. = ..()
+	if(prob(50))
+		icon_state = "friedchicken2"
+
+/obj/item/food/snacks/corndog
+	name = "corndog"
+	desc = "The busy man's hotdog."
+	icon_state = "corndog"
+	bite_consumption = 3
+	food_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/nutriment/protein = 9, /datum/reagent/consumable/ketchup = 3, /datum/reagent/consumable/nutriment/vitamin = 6)
+	tastes = list("cornmeal" = 3, "meat" = 2)
+	trash_type = /obj/item/trash/corndog
+	foodtypes = GRAIN | MEAT | FRIED
 
 //////////////////////////////////////////// KEBABS AND OTHER SKEWERS ////////////////////////////////////////////
 

@@ -118,8 +118,8 @@
 	name = "Oreo Donut"
 	reqs = list(
 		/datum/reagent/consumable/milk = 5,
-		/obj/item/food/snacks/cookie = 1,
-		/obj/item/food/snacks/donut/plain = 1
+		/obj/item/reagent_containers/food/snacks/cookie = 1,
+		/obj/item/reagent_containers/food/snacks/donut/plain = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/donut/oreo
 

@@ -231,7 +231,7 @@
 /datum/crafting_recipe/food/friedchicken
 	name = "Fried Chicken"
 	reqs = list(
-		/obj/item/food/snacks/meat/slab/chicken = 1,
+		/obj/item/food/meat/slab/chicken = 1,
 		/datum/reagent/consumable/cooking_oil = 10
 	)
 	result = /obj/item/food/snacks/friedchicken
